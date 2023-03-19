@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emissions Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">EcoTextileEmissions</div>
+    <nav>
+<!--      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Products</a>
+      <a href="#">Emissions Calculator</a>
+      <a href="#">Contact Us</a> -->
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Sustainable Textile Manufacturing for a Greener Tomorrow</h1>
+  </section>
+
+  <main>
+    <section class="calculator">
+	<!-- Add this code within the .calculator section -->
+	<form id="emissions-form">
+	  <fieldset>
+	    <legend>Scope 1 Emissions (Direct Emissions)</legend>
+	    <label for="natural-gas">Natural gas (MWh/year):</label>
+	    <input type="number" id="natural-gas" min="0" step="0.1">
+	    <br>
+	    <label for="diesel">Diesel (liters/year):</label>
+	    <input type="number" id="diesel" min="0" step="0.1">
+	    <br>
+	    <label for="propane">Propane (kg/year):</label>
+	    <input type="number" id="propane" min="0" step="0.1">
+	    <br>
+	  </fieldset>
+
+	  <fieldset>
+	    <legend>Scope 2 Emissions (Indirect Emissions from Energy Purchases)</legend>
+	    <label for="electricity">Electricity consumption (MWh/year):</label>
+	    <input type="number" id="electricity" min="0" step="0.1">
+	    <br>
+	    <label for="heating">District heating consumption (MWh/year):</label>
+	    <input type="number" id="heating" min="0" step="0.1">
+	    <br>
+	    <label for="cooling">District cooling consumption (MWh/year):</label>
+	    <input type="number" id="cooling" min="0" step="0.1">
+	    <br>
+	  </fieldset>
+	<fieldset>
+	  <legend>Scope 3 Emissions (Indirect Emissions from the Value Chain)</legend>
+	  <label for="cotton">Cotton (tons/year):</label>
+	  <input type="number" id="cotton" min="0" step="0.1">
+	  <br>
+	  <label for="polyester">Polyester (tons/year):</label>
+	  <input type="number" id="polyester" min="0" step="0.1">
+	  <br>
+	  <label for="viscose">Viscose (tons/year):</label>
+	  <input type="number" id="viscose" min="0" step="0.1">
+	  <br>
+	  <label for="wool">Wool (tons/year):</label>
+	  <input type="number" id="wool" min="0" step="0.1">
+	  <br>
+	  <label for="inbound-transport">Inbound transportation (tons CO2e/year):</label>
+	  <input type="number" id="inbound-transport" min="0" step="0.1">
+	  <br>
+	  <label for="waste">Waste generated (tons/year):</label>
+	  <input type="number" id="waste" min="0" step="0.1">
+	  <br>
+	  <label for="outbound-transport">Outbound transportation (tons CO2e/year):</label>
+	  <input type="number" id="outbound-transport" min="0" step="0.1">
+	  <br>
+	  <label for="commuting">Employee commuting (km/year):</label>
+	  <input type="number" id="commuting" min="0" step="0.1">
+	  <br>
+	  <label for="business-travel">Business travel (km/year):</label>
+	  <input type="number" id="business-travel" min="0" step="0.1">
+	  <br>
+	</fieldset>
+	  <!-- Add similar input fields for Scope 3 Emissions -->
+
+	  <input type="submit" value="Calculate Emissions">
+	</form>
+
+	<div id="results" style="display:none;">
+	  <h2>Results</h2>
+	  <p>Scope 1 Emissions: <span id="scope1-result">0</span> tons CO2e/year</p>
+	  <p>Scope 2 Emissions: <span id="scope2-result">0</span> tons CO2e/year</p>
+	  <p>Scope 3 Emissions: <span id="scope3-result">0</span> tons CO2e/year</p>
+
+
+	  <p>Total Emissions: <span id="total-result">0</span> tons CO2e/year</p>
+	</div>
+
+      <!-- Emissions Calculator Content Goes Here -->
+    </section>
+  </main>
+
+  <footer>
+<!--    <div class="company-info">
+      Company Name<br>
+      Address<br>
+      Phone Number<br>
+      Email Address
+    </div>
+    <div class="social-media">
+      Facebook | Twitter | LinkedIn | Instagram
+    </div>-->
+  </footer>
+
+  <div class="copyright">
+    Copyright © 2023. All rights reserved.
+  </div>
+</body>
+</html>
